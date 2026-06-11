@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio – SKS Corporation</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* FILTER TABS */
+    .filter-tabs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:48px;}
+    .filter-btn{padding:10px 24px;border-radius:100px;border:2px solid var(--blue-dk);background:transparent;color:var(--blue-dk);font-family:var(--font-display);font-weight:700;font-size:.85rem;letter-spacing:.04em;cursor:pointer;transition:var(--transition);}
+    .filter-btn.active,.filter-btn:hover{background:var(--blue-dk);color:var(--white);}
+    /* PORTFOLIO MASONRY */
+    .porto-full-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+    .porto-item{border-radius:var(--radius-lg);overflow:hidden;position:relative;cursor:pointer;}
+    .porto-item.wide{grid-column:span 2;}
+    .porto-item img{width:100%;height:280px;object-fit:cover;transition:transform .55s ease;}
+    .porto-item.wide img{height:300px;}
+    .porto-item:hover img{transform:scale(1.06);}
+    .porto-item__info{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,27,42,.92) 55%,transparent);display:flex;flex-direction:column;justify-content:flex-end;padding:24px;opacity:0;transition:opacity .35s;}
+    .porto-item:hover .porto-item__info{opacity:1;}
+    .porto-item__info h3{font-family:var(--font-display);font-size:1.05rem;font-weight:800;color:var(--white);margin-bottom:6px;}
+    .porto-item__info p{font-size:.8rem;color:rgba(255,255,255,.7);}
+    .porto-item__info .meta{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;}
+    .meta-tag{background:var(--yellow);color:var(--dark);padding:3px 10px;border-radius:100px;font-size:.7rem;font-family:var(--font-display);font-weight:800;}
+    @media(max-width:900px){.porto-full-grid{grid-template-columns:repeat(2,1fr);}.porto-item.wide{grid-column:span 1;}}
+    @media(max-width:540px){.porto-full-grid{grid-template-columns:1fr;}.porto-item.wide{grid-column:span 1;}}
+    /* STATS BAR */
+    .stats-bar{background:var(--yellow);padding:48px 0;}
+    .stats-bar__inner{display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px;}
+    .stats-bar .stat__num{color:var(--dark);}
+    .stats-bar .stat p{color:rgba(0,0,0,.65);}
+    .stats-bar .stat__unit{color:var(--dark);}
+    .stats-bar .stat__divider{background:rgba(0,0,0,.15);}
+  </style>
+</head>
+<body>
+
+  <div class="topbar"><div class="container topbar__inner"><span><i class="fas fa-phone"></i> +62 21 5500 8800</span><span><i class="fas fa-envelope"></i> info@skscorporation.co.id</span></div></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo"><span class="logo-icon"><i class="fas fa-industry"></i></span><span class="logo-text">SKS <em>Corporation</em></span></a>
+      <nav class="navbar__nav" id="navMenu">
+        <a href="../index.html" class="nav-link">Beranda</a>
+        <a href="about.html" class="nav-link">Tentang Kami</a>
+        <a href="services.html" class="nav-link">Layanan</a>
+        <a href="portfolio.html" class="nav-link active">Portofolio</a>
+        <a href="contact.html" class="nav-link">Kontak</a>
+      </nav>
+      <a href="contact.html" class="btn btn--yellow">Konsultasi Gratis</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__breadcrumb"><a href="../index.html">Beranda</a> / Portofolio</p>
+      <h1>Portofolio Proyek</h1>
+      <p>Lebih dari 180 proyek berskala besar yang telah kami sukseskan bersama klien terpercaya</p>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container stats-bar__inner">
+      <div class="stat"><span class="stat__num" data-target="180">0</span><span class="stat__unit">+</span><p>Proyek Selesai</p></div>
+      <div class="stat__divider"></div>
+      <div class="stat"><span class="stat__num" data-target="23">0</span><span class="stat__unit"></span><p>Provinsi Dijangkau</p></div>
+      <div class="stat__divider"></div>
+      <div class="stat"><span class="stat__num" data-target="350">0</span><span class="stat__unit">+</span><p>Unit Beroperasi</p></div>
+      <div class="stat__divider"></div>
+      <div class="stat"><span class="stat__num" data-target="95">0</span><span class="stat__unit">%</span><p>On-Time Delivery</p></div>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO GRID -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Rekam Jejak</span>
+        <h2>Proyek <span class="accent">Unggulan Kami</span></h2>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">Semua</button>
+        <button class="filter-btn" data-filter="highrise">Gedung Tinggi</button>
+        <button class="filter-btn" data-filter="infra">Infrastruktur</button>
+        <button class="filter-btn" data-filter="port">Pelabuhan</button>
+        <button class="filter-btn" data-filter="mining">Pertambangan</button>
+      </div>
+
+      <div class="porto-full-grid" id="portoGrid">
+
+        <div class="porto-item wide reveal" data-cat="highrise">
+          <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900&q=80" alt="IKN Tower" />
+          <div class="porto-item__info">
+            <h3>IKN Tower – Nusantara</h3>
+            <p>Penggunaan Tower Crane 300T dan 4 unit Kobelco SK500 untuk penggalian pondasi 60 meter.</p>
+            <div class="meta"><span class="meta-tag">High-Rise</span><span class="meta-tag">2023–2024</span><span class="meta-tag">Kalimantan Timur</span></div>
+          </div>
+        </div>
+
+        <div class="porto-item reveal" style="--delay:.1s" data-cat="infra">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="MRT Jakarta" />
+          <div class="porto-item__info">
+            <h3>MRT Jakarta Phase 3</h3>
+            <p>Support Tunnel Boring dengan crawler crane dan excavator khusus bawah tanah.</p>
+            <div class="meta"><span class="meta-tag">Terowongan</span><span class="meta-tag">2022–2024</span></div>
+          </div>
+        </div>
+
+        <div class="porto-item reveal" style="--delay:.15s" data-cat="highrise">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Sudirman Tower" />
+          <div class="porto-item__info">
+            <h3>Sudirman Central Business Tower</h3>
+            <p>2 unit Tower Crane 80T untuk pembangunan 62 lantai di kawasan CBD Jakarta.</p>
+            <div class="meta"><span class="meta-tag">High-Rise</span><span class="meta-tag">2021–2023</span></div>
+          </div>
+        </div>
+
+        <div class="porto-item reveal" data-cat="port">
+          <img src="https://images.unsplash.com/photo-1590059390047-f7b9e33c5b69?w=600&q=80" alt="Patimban" />
+          <div class="porto-item__info">
+            <h3>Terminal Pelabuhan Patimban</h3>
+            <p>30 unit Forklift 10T + 5 Reach Stacker untuk operasional terminal peti kemas.</p>
+            <div class="meta"><span class="meta-tag">Pelabuhan</span><span class="meta-tag">Subang, Jabar</span></div>
+          </div>
+        </div>
+
+        <div class="porto-item wide reveal" style="--delay:.1s" data-cat="infra">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Jembatan Batam" />
+          <div class="porto-item__info">
+            <h3>Jembatan Batam – Bintan</h3>
+            <p>Mobile Crane 500T untuk pemasangan bentang utama jembatan 2.2 km.</p>
+            <div class="meta"><span class="meta-tag">Jembatan</span><span class="meta-tag">2022–2023</span><span class="meta-tag">Kepulauan Riau</span></div>
+          </div>
+        </div>
+
+        <div class="porto-item reveal" data-cat="mining">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Tambang Kaltim" />
+          <div class="porto-item__info">
+            <h3>Site Pertambangan Kaltim Prima Coal</h3>
+            <p>Armada 8 unit Bulldozer D155 untuk land clearing area tambang batu bara.</p>
+            <div class="meta"><span class="meta-tag">Pertambangan</span><span class="meta-tag">Kalimantan</span></div>
+          </div>
+        </div>
+
+        <div class="porto-item reveal" style="--delay:.1s" data-cat="highrise">
+          <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80" alt="Makassar Tower" />
+          <div class="porto-item__info">
+            <h3>Makassar New Port Tower</h3>
+            <p>Crane dan excavator untuk pembangunan fasilitas pendukung pelabuhan baru Makassar.</p>
+            <div class="meta"><span class="meta-tag">High-Rise</span><span class="meta-tag">Sulawesi Selatan</span></div>
+          </div>
+        </div>
+
+        <div class="porto-item reveal" style="--delay:.15s" data-cat="infra">
+          <img src="https://images.unsplash.com/photo-1621194804096-25f7cc6c614d?w=600&q=80" alt="Tol Trans Jawa" />
+          <div class="porto-item__info">
+            <h3>Tol Trans Jawa – Semarang-Demak</h3>
+            <p>20+ unit excavator dan bulldozer untuk pembangunan jalan tol di atas laut.</p>
+            <div class="meta"><span class="meta-tag">Jalan Tol</span><span class="meta-tag">Jawa Tengah</span></div>
+          </div>
+        </div>
+
+        <div class="porto-item reveal" data-cat="port">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Pelabuhan Balikpapan" />
+          <div class="porto-item__info">
+            <h3>Pelabuhan Semayang Balikpapan</h3>
+            <p>Modernisasi fasilitas bongkar muat dengan 15 unit forklift heavy-duty.</p>
+            <div class="meta"><span class="meta-tag">Pelabuhan</span><span class="meta-tag">Kalimantan Timur</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="section partners">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Mitra Strategis</span>
+        <h2 style="color:var(--white)">Dipercaya oleh <span class="accent">Pemimpin Industri</span></h2>
+        <p style="color:rgba(255,255,255,.55)">Kami bermitra dengan perusahaan konstruksi dan industri terkemuka di Indonesia.</p>
+      </div>
+    </div>
+    <div class="ticker-wrap">
+      <div class="ticker" id="ticker">
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Waskita_Karya_logo.svg/320px-Waskita_Karya_logo.svg.png" alt="Waskita Karya" /><span>Waskita Karya</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/id/thumb/8/89/Logo_Wijaya_Karya.svg/320px-Logo_Wijaya_Karya.svg.png" alt="Wijaya Karya" /><span>Wijaya Karya</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Adhi_Karya_logo.svg/320px-Adhi_Karya_logo.svg.png" alt="Adhi Karya" /><span>Adhi Karya</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hutama_Karya_logo.svg/320px-Hutama_Karya_logo.svg.png" alt="Hutama Karya" /><span>Hutama Karya</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/PT_Pembangunan_Perumahan_%28Persero%29_Tbk_logo.svg/320px-PT_Pembangunan_Perumahan_%28Persero%29_Tbk_logo.svg.png" alt="PP" /><span>PP (Persero)</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Sinar_Mas_logo.svg/320px-Sinar_Mas_logo.svg.png" alt="Sinar Mas" /><span>Sinar Mas Land</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ciputra_logo.svg/320px-Ciputra_logo.svg.png" alt="Ciputra" /><span>Ciputra Group</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner"><div class="container cta-banner__inner"><div><h2>Ingin Proyek Anda Masuk Portofolio Berikutnya?</h2><p>Mari wujudkan proyek impian Anda bersama SKS Corporation.</p></div><a href="contact.html" class="btn btn--yellow btn--lg">Mulai Proyek Sekarang</a></div></section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand"><span class="logo-icon"><i class="fas fa-industry"></i></span><span class="logo-text">SKS <em>Corporation</em></span><p>Mitra alat berat terpercaya sejak 2001.</p><div class="footer__socials"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div></div>
+      <div class="footer__col"><h4>Navigasi</h4><ul><li><a href="../index.html">Beranda</a></li><li><a href="about.html">Tentang Kami</a></li><li><a href="services.html">Layanan</a></li><li><a href="portfolio.html">Portofolio</a></li><li><a href="contact.html">Kontak</a></li></ul></div>
+      <div class="footer__col"><h4>Layanan</h4><ul><li><a href="services.html">Sewa Forklift</a></li><li><a href="services.html">Sewa Bulldozer</a></li><li><a href="services.html">Sewa Kobelco</a></li><li><a href="services.html">Sewa Crane</a></li></ul></div>
+      <div class="footer__col footer__contact"><h4>Kontak</h4><p><i class="fas fa-map-marker-alt"></i>Jl. Sudirman Kav. 25, Jakarta Pusat</p><p><i class="fas fa-phone"></i>+62 21 5500 8800</p><p><i class="fas fa-envelope"></i>info@skscorporation.co.id</p></div>
+    </div>
+    <div class="footer__bottom"><div class="container"><p>© 2024 SKS Corporation. Didirikan oleh <strong>Qon De Toles</strong>.</p></div></div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backTop"><i class="fas fa-chevron-up"></i></a>
+  <script src="../js/main.js"></script>
+  <script>
+    // Portfolio Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portoItems = document.querySelectorAll('.porto-item');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        portoItems.forEach(item => {
+          const match = filter === 'all' || item.dataset.cat === filter;
+          item.style.display = match ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

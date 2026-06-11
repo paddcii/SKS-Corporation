@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SKS Corporation – Salam Kerja Sama Corp</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span><i class="fas fa-phone"></i> +62 21 5500 8800</span>
+      <span><i class="fas fa-envelope"></i> info@skscorporation.co.id</span>
+      <span><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</span>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <span class="logo-icon"><i class="fas fa-industry"></i></span>
+        <span class="logo-text">SKS <em>Corporation</em></span>
+      </a>
+      <nav class="navbar__nav" id="navMenu">
+        <a href="index.html" class="nav-link active">Beranda</a>
+        <a href="pages/about.html" class="nav-link">Tentang Kami</a>
+        <a href="pages/services.html" class="nav-link">Layanan</a>
+        <a href="pages/portfolio.html" class="nav-link">Portofolio</a>
+        <a href="pages/contact.html" class="nav-link">Kontak</a>
+      </nav>
+      <a href="pages/contact.html" class="btn btn--yellow">Konsultasi Gratis</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="hero__eyebrow">Berdiri Sejak 2001</p>
+      <h1 class="hero__title">Solusi Sewa Alat Berat <br /><span class="highlight">Terpercaya di Indonesia</span></h1>
+      <p class="hero__sub">SKS Corporation menyediakan armada alat berat premium — Forklift, Bulldozer, Kobelco, hingga Crane — untuk proyek gedung pencakar langit dan terowongan bawah tanah berskala besar.</p>
+      <div class="hero__cta">
+        <a href="pages/services.html" class="btn btn--yellow btn--lg">Lihat Layanan</a>
+        <a href="pages/portfolio.html" class="btn btn--outline btn--lg">Portofolio</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><span class="stat__num" data-target="23">0</span><span class="stat__unit">+</span><p>Tahun Pengalaman</p></div>
+        <div class="stat__divider"></div>
+        <div class="stat"><span class="stat__num" data-target="350">0</span><span class="stat__unit">+</span><p>Unit Alat Berat</p></div>
+        <div class="stat__divider"></div>
+        <div class="stat"><span class="stat__num" data-target="180">0</span><span class="stat__unit">+</span><p>Proyek Selesai</p></div>
+        <div class="stat__divider"></div>
+        <div class="stat"><span class="stat__num" data-target="95">0</span><span class="stat__unit">%</span><p>Kepuasan Klien</p></div>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES HIGHLIGHT ===== -->
+  <section class="section services-hl" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Apa yang Kami Tawarkan</span>
+        <h2>Armada Alat Berat <span class="accent">Kelas Dunia</span></h2>
+        <p>Dari forklift gudang hingga crane tower megaproyek, semua tersedia siap operasional dengan operator berpengalaman.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card card--dark reveal">
+          <div class="card__icon"><i class="fa-solid fa-pallet"></i></div>
+          <h3>Forklift</h3>
+          <p>Kapasitas 1–25 ton. Tersedia varian electric, diesel, dan reach-truck untuk kebutuhan warehouse hingga pelabuhan.</p>
+          <a href="pages/services.html" class="card__link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card card--yellow reveal" style="--delay:.1s">
+          <div class="card__icon"><i class="fas fa-tractor"></i></div>
+          <h3>Bulldozer</h3>
+          <p>Armada bulldozer Komatsu & CAT untuk pematangan lahan, pertambangan, dan proyek infrastruktur berskala besar.</p>
+          <a href="pages/services.html" class="card__link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card card--dark reveal" style="--delay:.2s">
+          <div class="card__icon"><i class="fas fa-digging"></i></div>
+          <h3>Kobelco Excavator</h3>
+          <p>Excavator Kobelco seri SK untuk penggalian pondasi gedung tinggi dan terowongan bawah tanah.</p>
+          <a href="pages/services.html" class="card__link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="card card--dark reveal" style="--delay:.3s">
+          <div class="card__icon"><i class="fas fa-broadcast-tower"></i></div>
+          <h3>Crane</h3>
+          <p>Tower crane, mobile crane, dan crawler crane berkapasitas hingga 500 ton untuk konstruksi gedung pencakar langit.</p>
+          <a href="pages/services.html" class="card__link">Selengkapnya <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT STRIP ===== -->
+  <section class="section about-strip">
+    <div class="container about-strip__inner">
+      <div class="about-strip__img reveal">
+        <div class="img-stack">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Proyek SKS" />
+          <div class="img-badge"><span class="badge-num">23</span><span>Tahun<br/>Berpengalaman</span></div>
+        </div>
+      </div>
+      <div class="about-strip__text reveal" style="--delay:.15s">
+        <span class="section-tag">Tentang SKS Corporation</span>
+        <h2>Dipercaya Membangun <span class="accent">Indonesia Sejak 2001</span></h2>
+        <p>Bermula dari visi CEO <strong>Qon De Toles</strong>, SKS Corporation hadir untuk mengisi kebutuhan sewa alat berat profesional di tanah air. Dalam dua dekade lebih, kami telah menjadi mitra strategis proyek-proyek prestisius: gedung pencakar langit, jalan tol, pelabuhan, hingga terowongan bawah tanah.</p>
+        <ul class="check-list">
+          <li><i class="fas fa-check-circle"></i> Armada terawat dengan standar K3 internasional</li>
+          <li><i class="fas fa-check-circle"></i> Operator bersertifikat BNSP & Kemnaker RI</li>
+          <li><i class="fas fa-check-circle"></i> Layanan 24/7 termasuk mobilisasi darurat</li>
+          <li><i class="fas fa-check-circle"></i> Asuransi komprehensif setiap unit</li>
+        </ul>
+        <a href="pages/about.html" class="btn btn--yellow">Pelajari Lebih Lanjut</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO PREVIEW ===== -->
+  <section class="section portfolio-prev" id="portfolio">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Karya Kami</span>
+        <h2>Proyek <span class="accent">Unggulan</span></h2>
+        <p>Lebih dari 180 proyek berskala besar telah kami selesaikan di seluruh Indonesia.</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="porto-card reveal">
+          <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80" alt="Gedung Pencakar Langit" />
+          <div class="porto-card__overlay">
+            <span class="porto-tag">High-Rise Building</span>
+            <h4>IKN Tower – Nusantara</h4>
+            <p>Tower crane 300T + Excavator Kobelco SK500</p>
+          </div>
+        </div>
+        <div class="porto-card reveal" style="--delay:.1s">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=700&q=80" alt="Konstruksi" />
+          <div class="porto-card__overlay">
+            <span class="porto-tag">Infrastructure</span>
+            <h4>Terowongan MRT Jakarta Phase 3</h4>
+            <p>Tunnel Boring Support + Crawler Crane</p>
+          </div>
+        </div>
+        <div class="porto-card reveal" style="--delay:.2s">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Jembatan" />
+          <div class="porto-card__overlay">
+            <span class="porto-tag">Bridge</span>
+            <h4>Jembatan Batam-Bintan</h4>
+            <p>Mobile Crane 500T + Forklift Heavy Duty</p>
+          </div>
+        </div>
+        <div class="porto-card reveal" style="--delay:.3s">
+          <img src="https://images.unsplash.com/photo-1590059390047-f7b9e33c5b69?w=700&q=80" alt="Pelabuhan" />
+          <div class="porto-card__overlay">
+            <span class="porto-tag">Port</span>
+            <h4>Terminal Pelabuhan Patimban</h4>
+            <p>30 Unit Forklift 10T + 5 Unit Reach Stacker</p>
+          </div>
+        </div>
+      </div>
+      <div class="center-cta">
+        <a href="pages/portfolio.html" class="btn btn--dark">Lihat Semua Proyek</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNER TICKER ===== -->
+  <section class="section partners">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Mitra Strategis</span>
+        <h2>Dipercaya oleh <span class="accent">Pemimpin Industri</span></h2>
+      </div>
+    </div>
+    <div class="ticker-wrap">
+      <div class="ticker" id="ticker">
+        <!-- JS will duplicate -->
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Waskita_Karya_logo.svg/320px-Waskita_Karya_logo.svg.png" alt="Waskita Karya" /><span>Waskita Karya</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/PT_Pembangunan_Perumahan_%28Persero%29_Tbk_logo.svg/320px-PT_Pembangunan_Perumahan_%28Persero%29_Tbk_logo.svg.png" alt="PP" /><span>PP (Persero)</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hutama_Karya_logo.svg/320px-Hutama_Karya_logo.svg.png" alt="Hutama Karya" /><span>Hutama Karya</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/id/thumb/8/89/Logo_Wijaya_Karya.svg/320px-Logo_Wijaya_Karya.svg.png" alt="Wijaya Karya" /><span>Wijaya Karya</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Adhi_Karya_logo.svg/320px-Adhi_Karya_logo.svg.png" alt="Adhi Karya" /><span>Adhi Karya</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Sinar_Mas_logo.svg/320px-Sinar_Mas_logo.svg.png" alt="Sinar Mas Land" /><span>Sinar Mas Land</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Ciputra_logo.svg/320px-Ciputra_logo.svg.png" alt="Ciputra" /><span>Ciputra Group</span></div>
+        <div class="ticker__item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Agung_Sedayu_Group_logo.svg/320px-Agung_Sedayu_Group_logo.svg.png" alt="Agung Sedayu" /><span>Agung Sedayu</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-tag">Apa Kata Klien</span>
+        <h2>Kepercayaan yang <span class="accent">Terus Tumbuh</span></h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card reveal">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"SKS Corporation menjadi mitra paling andal dalam proyek tower kami di Sudirman. Crane mereka selalu on-time dan operator-nya profesional."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">BW</div>
+            <div><strong>Budi Wahyono</strong><br/><small>Project Director, PT Waskita Karya</small></div>
+          </div>
+        </div>
+        <div class="testi-card reveal" style="--delay:.1s">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p>"Armada forklift SKS sangat membantu kelancaran operasional di pelabuhan kami. Respons tim sangat cepat saat ada kebutuhan mendesak."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">RA</div>
+            <div><strong>Rizky Adiputra</strong><br/><small>Operations Manager, Terminal Patimban</small></div>
+          </div>
+        </div>
+        <div class="testi-card reveal" style="--delay:.2s">
+          <div class="testi-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p>"Kobelco excavator dari SKS sangat handal untuk proyek tunnel MRT. Downtime hampir nol sepanjang kontrak 18 bulan."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">DN</div>
+            <div><strong>Dian Nugroho</strong><br/><small>Site Engineer, MRT Jakarta</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BANNER ===== -->
+  <section class="cta-banner">
+    <div class="container cta-banner__inner">
+      <div>
+        <h2>Siap Memulai Proyek Besar Anda?</h2>
+        <p>Konsultasikan kebutuhan alat berat Anda dengan tim ahli SKS Corporation sekarang juga.</p>
+      </div>
+      <a href="pages/contact.html" class="btn btn--yellow btn--lg">Hubungi Kami Sekarang</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <span class="logo-icon"><i class="fas fa-industry"></i></span>
+        <span class="logo-text">SKS <em>Corporation</em></span>
+        <p>Salam Kerja Sama Corp — Mitra alat berat terpercaya sejak 2001 untuk pembangunan Indonesia yang lebih kokoh.</p>
+        <div class="footer__socials">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="pages/about.html">Tentang Kami</a></li>
+          <li><a href="pages/services.html">Layanan</a></li>
+          <li><a href="pages/portfolio.html">Portofolio</a></li>
+          <li><a href="pages/contact.html">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Layanan</h4>
+        <ul>
+          <li><a href="pages/services.html">Sewa Forklift</a></li>
+          <li><a href="pages/services.html">Sewa Bulldozer</a></li>
+          <li><a href="pages/services.html">Sewa Kobelco</a></li>
+          <li><a href="pages/services.html">Sewa Crane</a></li>
+          <li><a href="pages/services.html">Operator Bersertifikat</a></li>
+        </ul>
+      </div>
+      <div class="footer__col footer__contact">
+        <h4>Kontak</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Jl. Sudirman Kav. 25, Gedung SKS Tower Lt. 12, Jakarta Pusat 10220</p>
+        <p><i class="fas fa-phone"></i> +62 21 5500 8800</p>
+        <p><i class="fas fa-envelope"></i> info@skscorporation.co.id</p>
+        <p><i class="fas fa-clock"></i> Senin – Sabtu, 08.00 – 17.00 WIB</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2024 SKS Corporation (Salam Kerja Sama Corp). Seluruh hak cipta dilindungi.</p>
+        <p>Didirikan oleh <strong>Qon De Toles</strong> – Melayani Indonesia Sejak 2001</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backTop"><i class="fas fa-chevron-up"></i></a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

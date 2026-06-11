@@ -1,0 +1,87 @@
+/* ===================================================
+   SKS CORPORATION – ANIMATIONS
+=================================================== */
+
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: .3; transform: scaleY(1); }
+  50%       { opacity: 1;  transform: scaleY(1.15); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ===== REVEAL ON SCROLL ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity .7s ease, transform .7s ease;
+  transition-delay: var(--delay, 0s);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== HERO ENTRANCE ===== */
+.hero__eyebrow  { animation: fadeUp .6s .2s both; }
+.hero__title    { animation: fadeUp .7s .35s both; }
+.hero__sub      { animation: fadeUp .6s .5s both; }
+.hero__cta      { animation: fadeUp .6s .65s both; }
+.hero__stats    { animation: fadeUp .6s .8s both; }
+
+/* ===== COUNTER ===== */
+.stat__num { transition: all .05s; }
+
+/* ===== HOVER GLOW on cards ===== */
+.card--yellow:hover { box-shadow: 0 16px 48px rgba(245,197,24,.4); }
+.card--dark:hover   { box-shadow: 0 16px 48px rgba(26,47,74,.35); }
+
+/* ===== NAV underline indicator ===== */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background: var(--yellow-dk);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ===== TICKER pause on hover ===== */
+.ticker:hover { animation-play-state: paused; }
+
+/* ===== PREFERS REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}

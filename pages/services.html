@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layanan – SKS Corporation</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .service-block { display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; margin-bottom:80px; }
+    .service-block:nth-child(even) .service-block__img { order:2; }
+    .service-block:nth-child(even) .service-block__text { order:1; }
+    .service-block__img img { width:100%; height:380px; object-fit:cover; border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); }
+    .service-block__text h2 { font-family:var(--font-display); font-size:2rem; font-weight:900; color:var(--dark); margin-bottom:14px; }
+    .service-block__text p { color:var(--text-muted); line-height:1.75; margin-bottom:20px; }
+    .spec-list { display:flex; flex-direction:column; gap:10px; margin-bottom:28px; }
+    .spec-list li { display:flex; align-items:center; gap:10px; font-size:.9rem; }
+    .spec-list li i { color:var(--yellow-dk); }
+    @media(max-width:768px){.service-block{grid-template-columns:1fr;gap:28px;}.service-block:nth-child(even) .service-block__img,.service-block:nth-child(even) .service-block__text{order:unset;}}
+  </style>
+</head>
+<body>
+
+  <div class="topbar"><div class="container topbar__inner"><span><i class="fas fa-phone"></i> +62 21 5500 8800</span><span><i class="fas fa-envelope"></i> info@skscorporation.co.id</span></div></div>
+
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="../index.html" class="navbar__logo"><span class="logo-icon"><i class="fas fa-industry"></i></span><span class="logo-text">SKS <em>Corporation</em></span></a>
+      <nav class="navbar__nav" id="navMenu">
+        <a href="../index.html" class="nav-link">Beranda</a>
+        <a href="about.html" class="nav-link">Tentang Kami</a>
+        <a href="services.html" class="nav-link active">Layanan</a>
+        <a href="portfolio.html" class="nav-link">Portofolio</a>
+        <a href="contact.html" class="nav-link">Kontak</a>
+      </nav>
+      <a href="contact.html" class="btn btn--yellow">Konsultasi Gratis</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__breadcrumb"><a href="../index.html">Beranda</a> / Layanan</p>
+      <h1>Layanan Sewa Alat Berat</h1>
+      <p>Armada premium siap operasional untuk semua skala proyek konstruksi Anda</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- FORKLIFT -->
+      <div class="service-block">
+        <div class="service-block__img reveal">
+          <img src="/img/forklift.jpg" alt="Forklift SKS" />
+        </div>
+        <div class="service-block__text reveal" style="--delay:.1s">
+          <span class="section-tag">Layanan 01</span>
+          <h2>Sewa <span class="accent">Forklift</span></h2>
+          <p>Armada forklift kami mencakup berbagai kapasitas untuk kebutuhan gudang, manufaktur, pelabuhan, hingga proyek konstruksi. Setiap unit dilengkapi operator bersertifikat dan asuransi komprehensif.</p>
+          <ul class="spec-list">
+            <li><i class="fas fa-check"></i> Kapasitas 1 – 25 Ton</li>
+            <li><i class="fas fa-check"></i> Tipe: Electric, Diesel, LPG, Reach Truck</li>
+            <li><i class="fas fa-check"></i> Merek: Toyota, Komatsu, Hyster, Crown</li>
+            <li><i class="fas fa-check"></i> Sewa harian, mingguan, bulanan</li>
+            <li><i class="fas fa-check"></i> Operator bersertifikat BNSP tersedia</li>
+          </ul>
+          <a href="contact.html" class="btn btn--yellow">Dapatkan Penawaran</a>
+        </div>
+      </div>
+
+      <!-- BULLDOZER -->
+      <div class="service-block">
+        <div class="service-block__img reveal" style="--delay:.1s">
+          <img src="/img/bulldozer.jpg" alt="Bulldozer SKS" />
+        </div>
+        <div class="service-block__text reveal">
+          <span class="section-tag">Layanan 02</span>
+          <h2>Sewa <span class="accent">Bulldozer</span></h2>
+          <p>Bulldozer andalan kami hadir untuk pekerjaan land clearing, pemadatan tanah, dan grading di proyek pertambangan, perkebunan, serta infrastruktur skala besar di seluruh Indonesia.</p>
+          <ul class="spec-list">
+            <li><i class="fas fa-check"></i> Komatsu D65, D85, D155</li>
+            <li><i class="fas fa-check"></i> Caterpillar D6, D8, D9</li>
+            <li><i class="fas fa-check"></i> Blade kapasitas hingga 12 m³</li>
+            <li><i class="fas fa-check"></i> GPS tracking setiap unit</li>
+            <li><i class="fas fa-check"></i> Tersedia seluruh wilayah Indonesia</li>
+          </ul>
+          <a href="contact.html" class="btn btn--yellow">Dapatkan Penawaran</a>
+        </div>
+      </div>
+
+      <!-- KOBELCO -->
+      <div class="service-block">
+        <div class="service-block__img reveal">
+          <img src="/img/excavator.jpg" alt="Excavator" />
+        </div>
+        <div class="service-block__text reveal" style="--delay:.1s">
+          <span class="section-tag">Layanan 03</span>
+          <h2>Sewa <span class="accent">Excavator</span></h2>
+          <p>Kobelco Excavator kami sangat handal untuk penggalian pondasi gedung tinggi, terowongan bawah tanah, saluran drainase, dan pengerukan sungai. Dikenal irit bahan bakar dan presisi tinggi.</p>
+          <ul class="spec-list">
+            <li><i class="fas fa-check"></i> Seri SK75, SK200, SK300, SK500</li>
+            <li><i class="fas fa-check"></i> Bucket kapasitas 0.3 – 2.5 m³</li>
+            <li><i class="fas fa-check"></i> Attachment: breaker, grapple, clamshell</li>
+            <li><i class="fas fa-check"></i> Arm & boom extendable tersedia</li>
+            <li><i class="fas fa-check"></i> Garansi downtime <2% per bulan</li>
+          </ul>
+          <a href="contact.html" class="btn btn--yellow">Dapatkan Penawaran</a>
+        </div>
+      </div>
+
+      <!-- CRANE -->
+      <div class="service-block">
+        <div class="service-block__img reveal" style="--delay:.1s">
+          <img src="/img/crane.jpg" alt="Crane SKS" />
+        </div>
+        <div class="service-block__text reveal">
+          <span class="section-tag">Layanan 04</span>
+          <h2>Sewa <span class="accent">Crane</span></h2>
+          <p>Solusi pengangkatan untuk proyek konstruksi gedung pencakar langit, instalasi industri berat, dan infrastruktur strategis. Tersedia tower crane, mobile crane, dan crawler crane dengan jangkauan hingga 100 meter.</p>
+          <ul class="spec-list">
+            <li><i class="fas fa-check"></i> Tower Crane: 8 – 80 Ton</li>
+            <li><i class="fas fa-check"></i> Mobile Crane: 25 – 500 Ton (Liebherr, Tadano)</li>
+            <li><i class="fas fa-check"></i> Crawler Crane: 100 – 500 Ton</li>
+            <li><i class="fas fa-check"></i> Lifting plan & rigging engineering</li>
+            <li><i class="fas fa-check"></i> Operator crane bersertifikat Kemnaker</li>
+          </ul>
+          <a href="contact.html" class="btn btn--yellow">Dapatkan Penawaran</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section" style="background:var(--dark);padding:80px 0;">
+    <div class="container">
+      <div class="section-head" style="color:var(--white)">
+        <span class="section-tag">Keunggulan Kami</span>
+        <h2 style="color:var(--white)">Mengapa Pilih <span class="accent">SKS Corporation?</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;">
+        <div style="text-align:center;padding:28px 20px;border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);" class="reveal">
+          <i class="fas fa-tools" style="font-size:2rem;color:var(--yellow);margin-bottom:16px;display:block;"></i>
+          <h4 style="font-family:var(--font-display);font-weight:800;color:var(--white);margin-bottom:8px;">Armada Terawat</h4>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);">Servis berkala dan inspeksi K3 setiap unit sebelum pengiriman.</p>
+        </div>
+        <div style="text-align:center;padding:28px 20px;border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);" class="reveal" style2="--delay:.1s">
+          <i class="fas fa-headset" style="font-size:2rem;color:var(--yellow);margin-bottom:16px;display:block;"></i>
+          <h4 style="font-family:var(--font-display);font-weight:800;color:var(--white);margin-bottom:8px;">Support 24/7</h4>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);">Tim teknis siap sedia kapan pun Anda membutuhkan bantuan darurat.</p>
+        </div>
+        <div style="text-align:center;padding:28px 20px;border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);" class="reveal">
+          <i class="fas fa-file-contract" style="font-size:2rem;color:var(--yellow);margin-bottom:16px;display:block;"></i>
+          <h4 style="font-family:var(--font-display);font-weight:800;color:var(--white);margin-bottom:8px;">Kontrak Fleksibel</h4>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);">Harian, mingguan, bulanan, atau kontrak proyek jangka panjang.</p>
+        </div>
+        <div style="text-align:center;padding:28px 20px;border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);" class="reveal">
+          <i class="fas fa-shipping-fast" style="font-size:2rem;color:var(--yellow);margin-bottom:16px;display:block;"></i>
+          <h4 style="font-family:var(--font-display);font-weight:800;color:var(--white);margin-bottom:8px;">Mobilisasi Cepat</h4>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.55);">Pengiriman alat ke lokasi proyek dalam 24 jam untuk area Jabodetabek.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner"><div class="container cta-banner__inner"><div><h2>Butuh Penawaran Harga?</h2><p>Tim kami siap menyiapkan proposal sesuai kebutuhan spesifik proyek Anda.</p></div><a href="contact.html" class="btn btn--yellow btn--lg">Minta Penawaran Sekarang</a></div></section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand"><span class="logo-icon"><i class="fas fa-industry"></i></span><span class="logo-text">SKS <em>Corporation</em></span><p>Mitra alat berat terpercaya sejak 2001.</p><div class="footer__socials"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a></div></div>
+      <div class="footer__col"><h4>Navigasi</h4><ul><li><a href="../index.html">Beranda</a></li><li><a href="about.html">Tentang Kami</a></li><li><a href="services.html">Layanan</a></li><li><a href="portfolio.html">Portofolio</a></li><li><a href="contact.html">Kontak</a></li></ul></div>
+      <div class="footer__col"><h4>Layanan</h4><ul><li><a href="services.html">Sewa Forklift</a></li><li><a href="services.html">Sewa Bulldozer</a></li><li><a href="services.html">Sewa Kobelco</a></li><li><a href="services.html">Sewa Crane</a></li></ul></div>
+      <div class="footer__col footer__contact"><h4>Kontak</h4><p><i class="fas fa-map-marker-alt"></i>Jl. Sudirman Kav. 25, Jakarta Pusat</p><p><i class="fas fa-phone"></i>+62 21 5500 8800</p><p><i class="fas fa-envelope"></i>info@skscorporation.co.id</p></div>
+    </div>
+    <div class="footer__bottom"><div class="container"><p>© 2024 SKS Corporation. Didirikan oleh <strong>Qon De Toles</strong>.</p></div></div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backTop"><i class="fas fa-chevron-up"></i></a>
+  <script src="../js/main.js"></script>
+</body>
+</html>
